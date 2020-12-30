@@ -1,0 +1,46 @@
+#: import rgba kivy.utils.rgba
+#: import mtx kivy.metrics
+
+<SendScreen>:
+    id: send_screen
+    name: 'send_screen'
+    BoxLayout:
+        id: bx_layout
+        padding: mtx.dp(60)
+        orientation: 'vertical'
+        valign: 'top'
+        canvas.before:
+            Color:
+                rgb: rgba('#FF0000ff')
+            Line:
+                width: 2.
+                ellipse: (self.x+mtx.dp(4), self.size[1]-self.height/6-mtx.dp(4), self.width-mtx.dp(8), self.height/6)
+                close: True
+        canvas.after:
+            Color:
+                rgb: rgba('#FF0000ff')
+            Line:
+                width: 2.
+                points: (mtx.dp(46), self.size[1]-self.height/7, self.width-mtx.dp(48), self.size[1]-mtx.dp(21))
+        Label:
+            id: fearEllipse
+            text: 'FEAR'
+            size_hint_y: 0.01
+            font_size: mtx.sp('60')
+            markup: True
+            color: rgba('#ED7D31ff')
+        Widget:
+            size_hint_y: .05
+        Label:
+            id: signIn
+            text: 'Sign Up:'
+            size_hint_x: None
+            size_hint_y: .35
+            font_size: mtx.sp('20')
+            markup: True
+            color: rgba('#ED7D31ff')
+        Widget:
+            size_hint_y:  .55
+        MDRaisedButton:
+            text: 'Sign Up (new)'
+            on_release: app.root.current = 'main_screen'
