@@ -1,6 +1,5 @@
 from kivymd.app import MDApp
-#:import FirebaseLoginScreen screens.firebaseloginscreen.FirebaseLoginScreen
-import FirebaseLoginScreen
+from screens.firebaseloginscreen import FirebaseLoginScreen
 #from screens.firebaseloginscreen.FirebaseLoginScreen import FirebaseLoginScreen
 #from screens.firebaseloginscreen.FirebaseLoginScreen import FirebaseLoginScreen
 from screens.welcomescreen import WelcomeScreen
